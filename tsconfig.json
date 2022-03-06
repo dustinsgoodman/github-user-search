@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -21,7 +22,10 @@
       "cypress",
       "@testing-library/jest-dom",
       "@types/testing-library__jest-dom"
-    ]
+    ],
+    "paths": {
+      "components/*": ["src/components/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
