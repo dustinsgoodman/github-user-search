@@ -9,6 +9,6 @@ const buildPrettierCommand = (filenames) =>
   `prettier --write ${filenames.join(' ')}`;
 
 module.exports = {
-  '*': [buildPrettierCommand],
+  '!(package.json|yarn.lock)': [buildPrettierCommand],
   '*.{js,jsx,ts,tsx}': [buildEslintCommand],
 };
