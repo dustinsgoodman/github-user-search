@@ -1,6 +1,6 @@
 describe('app homepage loads', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000');
+    cy.visit('/');
   });
 
   it('should render the home page and display a message', () => {
