@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "yarn codegen",
     "dev": "next dev",
+    "prebuild": "yarn codegen",
     "build": "next build",
     "start": "next start",
     "test": "jest",
@@ -17,9 +19,12 @@
     "cy:headless": "cypress run",
     "e2e:pre": "next build && next start",
     "e2e": "start-server-and-test e2e:pre http://localhost:3000 cy",
-    "e2e:headless": "start-server-and-test e2e:pre http://localhost:3000 cy:headless"
+    "e2e:headless": "start-server-and-test e2e:pre http://localhost:3000 cy:headless",
+    "codegen": "graphql-codegen --config codegen.yml --require dotenv/config"
   },
   "dependencies": {
+    "graphql": "^16.3.0",
+    "graphql-request": "^4.0.0",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
@@ -28,6 +33,10 @@
     "@babel/core": "^7.17.5",
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
+    "@graphql-codegen/cli": "2.6.2",
+    "@graphql-codegen/typescript": "2.4.5",
+    "@graphql-codegen/typescript-graphql-request": "^4.3.7",
+    "@graphql-codegen/typescript-operations": "2.3.2",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
