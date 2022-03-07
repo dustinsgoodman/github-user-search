@@ -1,0 +1,1 @@
+export { HomepageCard } from './HomepageCard';
