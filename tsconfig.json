@@ -25,7 +25,9 @@
     ],
     "paths": {
       "components/*": ["src/components/*"],
-      "lib/*": ["src/lib/*"]
+      "gql/*": ["src/gql/*"],
+      "lib/*": ["src/lib/*"],
+      "types/*": ["src/types/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
