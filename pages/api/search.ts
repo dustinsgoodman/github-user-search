@@ -12,7 +12,7 @@ type QueryParams = {
 
 export type SearchResponse = UserSearchQuery['search'] | { error: string };
 
-const { GITHUB_ACCESS_TOKEN } = process.env;
+const { GH_ACCESS_TOKEN } = process.env;
 
 const handler = async (
   req: NextApiRequest,
@@ -44,7 +44,7 @@ const handler = async (
       after,
     },
     {
-      Authorization: `bearer ${GITHUB_ACCESS_TOKEN}`,
+      Authorization: `bearer ${GH_ACCESS_TOKEN}`,
     },
   );
 
