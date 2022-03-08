@@ -40,6 +40,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install dependencies
         run: yarn
+      - name: Run codegen
+        run: yarn codegen
       - name: Run unit tests
         run: yarn test
 
@@ -52,6 +54,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install dependencies
         run: yarn
+      - name: Run codegen
+        run: yarn codegen
       - name: Run E2E tests
         run: yarn e2e:headless
 
