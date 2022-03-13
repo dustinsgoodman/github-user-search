@@ -26,6 +26,7 @@
     "paths": {
       "components/*": ["src/components/*"],
       "gql/*": ["src/gql/*"],
+      "hooks/*": ["src/hooks/*"],
       "lib/*": ["src/lib/*"],
       "pages/*": ["pages/*"],
       "types/*": ["src/types/*"]
