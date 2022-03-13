@@ -1,22 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { GraphQLClient } from 'graphql-request';
-import { getSdk, UserSearchQuery } from 'types/github';
-
-type QueryParams = {
-  username?: string;
-  first?: number;
-  last?: number;
-  before?: string;
-  after?: string;
-};
-
-export type SearchResponse = UserSearchQuery['search'] | { error: string };
+import { getSdk } from 'types/github';
+import type { SearchInputs, APISearchResponse } from 'types/search';
 
 const { GH_ACCESS_TOKEN } = process.env;
 
 const handler = async (
   req: NextApiRequest,
-  res: NextApiResponse<SearchResponse>,
+  res: NextApiResponse<APISearchResponse>,
 ) => {
   const {
     username,
@@ -24,7 +15,7 @@ const handler = async (
     last,
     before,
     after,
-  } = req.query as QueryParams;
+  } = req.query as SearchInputs;
 
   if (!username) {
     res.status(400).json({
