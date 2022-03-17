@@ -24,10 +24,13 @@
       "@types/testing-library__jest-dom"
     ],
     "paths": {
+      "api/*": ["src/api/*"],
       "components/*": ["src/components/*"],
       "gql/*": ["src/gql/*"],
+      "hooks/*": ["src/hooks/*"],
       "lib/*": ["src/lib/*"],
       "pages/*": ["pages/*"],
+      "test/*": ["test/*"],
       "types/*": ["src/types/*"]
     }
   },

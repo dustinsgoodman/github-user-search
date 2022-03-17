@@ -1,12 +1,15 @@
-import { render, screen } from '@testing-library/react';
-import Home from 'pages/index';
+import { getPage } from 'next-page-tester';
+import { screen } from '@testing-library/react';
 
 describe('Home', () => {
-  it('renders a heading', () => {
-    render(<Home />);
+  it('renders a heading', async () => {
+    const { render } = await getPage({
+      route: '/',
+    });
+    render();
 
     const heading = screen.getByRole('heading', {
-      name: /welcome to next\.js!/i,
+      name: /welcome to github user search/i,
     });
 
     expect(heading).toBeInTheDocument();

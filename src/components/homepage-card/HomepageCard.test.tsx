@@ -1,5 +1,5 @@
 import { render, screen } from 'lib/testUtils';
-import { HomepageCard } from './HomepageCard';
+import { HomepageCard } from '.';
 
 describe('HomepageCard', () => {
   it('renders link container with title and description', () => {

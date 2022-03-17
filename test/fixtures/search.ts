@@ -1,4 +1,6 @@
-export const reactjsDefault = {
+import type { APISearchResponse } from 'types/search';
+
+export const reactjsDefault: APISearchResponse = {
   userCount: 11619,
   nodes: [
     {
@@ -522,7 +524,7 @@ export const reactjsDefault = {
   },
 };
 
-export const reactjsLimit10 = {
+export const reactjsLimit10: APISearchResponse = {
   userCount: 11619,
   nodes: [
     {

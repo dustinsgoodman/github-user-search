@@ -16,6 +16,20 @@ const customJestConfig = {
   modulePaths: ['<rootDir>'],
   testEnvironment: 'jest-environment-jsdom',
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/cypress'],
+  collectCoverage: true,
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.stories.{js,jsx,ts,tsx}',
+    'pages/**/*.{js,jsx,ts,tsx}',
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 98,
+      functions: 97,
+      lines: 92,
+      statements: 97,
+    },
+  },
 };
 
 module.exports = createJestConfig(customJestConfig);
