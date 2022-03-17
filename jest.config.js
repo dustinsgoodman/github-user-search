@@ -22,6 +22,14 @@ const customJestConfig = {
     '!src/**/*.stories.{js,jsx,ts,tsx}',
     'pages/**/*.{js,jsx,ts,tsx}',
   ],
+  coverageThreshold: {
+    global: {
+      branches: 98,
+      functions: 97,
+      lines: 92,
+      statements: 97,
+    },
+  },
 };
 
 module.exports = createJestConfig(customJestConfig);
