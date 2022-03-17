@@ -5,7 +5,9 @@ import useSearchResults from 'hooks/use-search-results';
 
 const Results: NextPage = () => {
   const router = useRouter();
-  const { data } = useSearchResults({ username: router.query.username });
+  const { data } = useSearchResults({
+    username: router.query.username?.toString(),
+  });
 
   return (
     <div className="container">

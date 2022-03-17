@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Image from 'next/image';
 import SearchForm from 'components/search-form';
-import type { SearchInputs } from 'components/search-form';
+import type { SearchInputs } from 'types/search';
 
 const Home: NextPage = () => {
   const router = useRouter();
