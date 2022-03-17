@@ -30,6 +30,7 @@
       "hooks/*": ["src/hooks/*"],
       "lib/*": ["src/lib/*"],
       "pages/*": ["pages/*"],
+      "test/*": ["test/*"],
       "types/*": ["src/types/*"]
     }
   },
