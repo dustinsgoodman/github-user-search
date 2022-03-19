@@ -1,4 +1,3 @@
-import { URLSearchParams } from 'url';
 import type { APISearchResponse, SearchInputs } from 'types/search';
 
 export const getSearchResults = async ({
