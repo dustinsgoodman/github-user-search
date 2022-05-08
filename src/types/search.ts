@@ -8,7 +8,8 @@ export type SearchInputs = {
   after?: string;
 };
 
-export type APISearchResponse = UserSearchQuery['search'] | { error: string };
+export type APISearchResponse = UserSearchQuery['search'];
+export type APIErrorResponse = string;
 
 export type User = {
   __typename?: 'User';

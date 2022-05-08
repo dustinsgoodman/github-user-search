@@ -1,4 +1,8 @@
-import type { APISearchResponse, SearchInputs } from 'types/search';
+import type {
+  APIErrorResponse,
+  APISearchResponse,
+  SearchInputs,
+} from 'types/search';
 
 export const getSearchResults = async ({
   username,
@@ -8,7 +12,16 @@ export const getSearchResults = async ({
     queryParams.set('username', username);
   }
 
-  const response = await fetch(`/api/search?${queryParams.toString()}`);
+  const response = await fetch(
+    `${window.location}/api/search?${queryParams.toString()}`,
+  );
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(errorText);
+  }
+
   const data: APISearchResponse = await response.json();
+
   return data;
 };
