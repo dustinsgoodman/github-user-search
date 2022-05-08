@@ -1,5 +1,5 @@
 import fetch from 'jest-fetch-mock';
-import { APISearchResponse } from 'types/search';
+import { APIErrorResponse, APISearchResponse } from 'types/search';
 import { reactjsLimit10 } from 'test/fixtures/search';
 import { getSearchResults } from './getSearchResults';
 
@@ -17,7 +17,9 @@ describe('.getSearchResults', () => {
     });
 
     it('calls the search endpoint with the username', () => {
-      expect(fetch).toHaveBeenCalledWith('/api/search?username=test');
+      expect(fetch).toHaveBeenCalledWith(
+        expect.stringMatching(/\/api\/search\?username=test/),
+      );
     });
 
     it('returns the search results', () => {
@@ -30,27 +32,25 @@ describe('.getSearchResults', () => {
 
   describe('when no username is passed', () => {
     beforeAll(async () => {
-      fetch.mockResponseOnce(
-        JSON.stringify({
-          error: 'username is required',
-        }),
-      );
-      subject = await getSearchResults({ username: undefined });
+      fetch.mockResponseOnce('username is required', {
+        status: 400,
+      });
     });
 
     afterAll(() => {
       fetch.resetMocks();
     });
 
-    it('calls the search endpoint with the username', () => {
-      expect(fetch).toHaveBeenCalledWith('/api/search?');
+    it('throws username is required error', () => {
+      expect(async () => {
+        await getSearchResults({ username: undefined });
+      }).rejects.toThrow('username is required');
     });
 
-    it('returns the search results', () => {
-      expect(subject).toEqual({ error: 'username is required' });
-      expect(subject).not.toHaveProperty('nodes');
-      expect(subject).not.toHaveProperty('userCount');
-      expect(subject).not.toHaveProperty('pageInfo');
+    it('calls the search endpoint with the username', () => {
+      expect(fetch).toHaveBeenCalledWith(
+        expect.stringMatching(/\/api\/search\?/),
+      );
     });
   });
 });
