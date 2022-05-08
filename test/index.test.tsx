@@ -5,6 +5,7 @@ describe('Home', () => {
   it('renders a heading', async () => {
     const { render } = await getPage({
       route: '/',
+      wrappers: 'test/wrappers.tsx',
     });
     render();
 
