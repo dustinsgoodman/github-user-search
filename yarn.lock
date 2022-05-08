@@ -11194,6 +11194,11 @@ next-page-tester@^0.32.0:
     stealthy-require "^1.1.1"
     tiny-glob "^0.2.9"
 
+next-router-mock@^0.6.8:
+  version "0.6.8"
+  resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-0.6.8.tgz#bc9586e87453a19c505652c0f3fe376cc29c9ad0"
+  integrity sha512-sPGklIwd0k4eHyhk16RRg0BJ3xKtszsyEV1QE0mo9gDicmHdP3YTiq/7/rYrPs3azBhTDkga3QzkKlXyj6OC3A==
+
 next@^12.1.5:
   version "12.1.5"
   resolved "https://registry.yarnpkg.com/next/-/next-12.1.5.tgz#7a07687579ddce61ee519493e1c178d83abac063"
