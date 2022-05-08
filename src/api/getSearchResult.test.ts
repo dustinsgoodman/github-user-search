@@ -1,5 +1,5 @@
 import fetch from 'jest-fetch-mock';
-import { APIErrorResponse, APISearchResponse } from 'types/search';
+import { APISearchResponse } from 'types/search';
 import { reactjsLimit10 } from 'test/fixtures/search';
 import { getSearchResults } from './getSearchResults';
 
