@@ -81,10 +81,15 @@ export const getServerSideProps: GetStaticProps<
   await queryClient.prefetchQuery(
     ['username', username],
     async () => {
-      const resp = await getSearchData({
-        query: username,
-      });
-      return resp;
+      try {
+        const resp = await getSearchData({
+          query: username,
+        });
+        console.log(resp);
+        return resp;
+      } catch (err) {
+        console.log(err);
+      }
     },
     { staleTime: STALE_TIME },
   );
