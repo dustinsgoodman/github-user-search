@@ -1,6 +1,5 @@
-import { waitFor } from '@testing-library/react';
 import { getPage } from 'next-page-tester';
-import { act, fireEvent, screen, mockRouter } from 'test/utils';
+import { act, fireEvent, screen, mockRouter, waitFor } from 'test/utils';
 
 jest.mock('next/router', () => require('next-router-mock'));
 

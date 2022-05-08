@@ -1,7 +1,7 @@
 import { createMocks } from 'node-mocks-http';
 import nock from 'nock';
 import handler, { getSearchData } from 'pages/api/search';
-import { reactjsDefault, reactjsLimit10 } from '../fixtures/search';
+import { reactjsDefault, reactjsLimit10 } from 'test/fixtures/search';
 
 describe('.getSearchData', () => {
   beforeAll(() => nock.disableNetConnect());

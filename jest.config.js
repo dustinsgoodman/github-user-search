@@ -20,6 +20,7 @@ const customJestConfig = {
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.stories.{js,jsx,ts,tsx}',
+    '!src/gql/**/*',
     'pages/**/*.{js,jsx,ts,tsx}',
   ],
   coverageThreshold: {
