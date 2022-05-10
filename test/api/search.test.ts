@@ -1,29 +1,9 @@
 import { createMocks } from 'node-mocks-http';
-import nock from 'nock';
 import handler, { getSearchData } from 'pages/api/search';
 import { reactjsDefault, reactjsLimit10 } from 'test/fixtures/search';
 
 describe('.getSearchData', () => {
-  beforeAll(() => nock.disableNetConnect());
-  afterAll(() => nock.enableNetConnect());
-  afterEach(() => nock.cleanAll());
-
   it('returns the data from GitHub', async () => {
-    nock('https://api.github.com')
-      .post(
-        '/graphql',
-        (body) =>
-          body.query &&
-          Object.keys(body.variables).length >= 2 &&
-          body.variables.query === 'reactjs' &&
-          body.variables.first === 30,
-      )
-      .reply(200, {
-        data: {
-          search: reactjsDefault,
-        },
-      });
-
     const subject = await getSearchData({
       query: 'reactjs',
     });
@@ -34,10 +14,6 @@ describe('.getSearchData', () => {
 });
 
 describe('/api/search', () => {
-  beforeAll(() => nock.disableNetConnect());
-  afterAll(() => nock.enableNetConnect());
-  afterEach(() => nock.cleanAll());
-
   describe('when no username provided', () => {
     it('returns error message', async () => {
       const { req, res } = createMocks({
@@ -53,20 +29,6 @@ describe('/api/search', () => {
 
   describe('when username provided and no pagination', () => {
     it('returns the search result', async () => {
-      nock('https://api.github.com')
-        .post(
-          '/graphql',
-          (body) =>
-            body.query &&
-            Object.keys(body.variables).length >= 2 &&
-            body.variables.query === 'reactjs' &&
-            body.variables.first === 30,
-        )
-        .reply(200, {
-          data: {
-            search: reactjsDefault,
-          },
-        });
       const { req, res } = createMocks({
         method: 'GET',
         query: {
@@ -86,20 +48,6 @@ describe('/api/search', () => {
 
   describe('when username provided and pagination', () => {
     it('returns the search result', async () => {
-      nock('https://api.github.com')
-        .post(
-          '/graphql',
-          (body) =>
-            body.query &&
-            Object.keys(body.variables).length >= 2 &&
-            body.variables.query === 'reactjs' &&
-            body.variables.first === 10,
-        )
-        .reply(200, {
-          data: {
-            search: reactjsLimit10,
-          },
-        });
       const { req, res } = createMocks({
         method: 'GET',
         query: {
@@ -120,21 +68,6 @@ describe('/api/search', () => {
 
   describe('when username provided and reverse pagination', () => {
     it('returns the search result', async () => {
-      nock('https://api.github.com')
-        .post(
-          '/graphql',
-          (body) =>
-            body.query &&
-            Object.keys(body.variables).length >= 2 &&
-            body.variables.query === 'reactjs' &&
-            body.variables.last === 10 &&
-            body.variables.before,
-        )
-        .reply(200, {
-          data: {
-            search: reactjsLimit10,
-          },
-        });
       const { req, res } = createMocks({
         method: 'GET',
         query: {

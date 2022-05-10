@@ -1,4 +1,3 @@
-import fetch from 'jest-fetch-mock';
 import { APISearchResponse } from 'types/search';
 import { reactjsLimit10 } from 'test/fixtures/search';
 import { getSearchResults } from './getSearchResults';
@@ -8,18 +7,7 @@ describe('.getSearchResults', () => {
 
   describe('when only username is passed', () => {
     beforeAll(async () => {
-      fetch.mockResponseOnce(JSON.stringify(reactjsLimit10));
       subject = await getSearchResults({ username: 'test' });
-    });
-
-    afterAll(() => {
-      fetch.resetMocks();
-    });
-
-    it('calls the search endpoint with the username', () => {
-      expect(fetch).toHaveBeenCalledWith(
-        expect.stringMatching(/\/api\/search\?username=test/),
-      );
     });
 
     it('returns the search results', () => {
@@ -31,26 +19,12 @@ describe('.getSearchResults', () => {
   });
 
   describe('when no username is passed', () => {
-    beforeAll(async () => {
-      fetch.mockResponseOnce('username is required', {
-        status: 400,
-      });
-    });
-
-    afterAll(() => {
-      fetch.resetMocks();
-    });
-
-    it('throws username is required error', () => {
-      expect(async () => {
+    it('throws username is required error', async () => {
+      try {
         await getSearchResults({ username: undefined });
-      }).rejects.toThrow('username is required');
-    });
-
-    it('calls the search endpoint with the username', () => {
-      expect(fetch).toHaveBeenCalledWith(
-        expect.stringMatching(/\/api\/search\?/),
-      );
+      } catch (e) {
+        expect((e as Error).message).toMatch('Bad request');
+      }
     });
   });
 });
