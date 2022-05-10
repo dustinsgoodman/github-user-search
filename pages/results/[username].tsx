@@ -85,10 +85,9 @@ export const getServerSideProps: GetStaticProps<
         const resp = await getSearchData({
           query: username,
         });
-        console.log(resp);
         return resp;
       } catch (err) {
-        console.log(err);
+        console.error(err);
       }
     },
     { staleTime: STALE_TIME },

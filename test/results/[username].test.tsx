@@ -4,18 +4,7 @@ import { act, fireEvent, screen, waitFor } from 'test/utils';
 import { reactjsDefault } from 'test/fixtures/search';
 
 describe('Search Results Page', () => {
-  beforeAll(() => nock.disableNetConnect());
-  afterAll(() => nock.enableNetConnect());
-  afterEach(() => nock.cleanAll());
-
   it('renders a heading and perform search', async () => {
-    nock('https://api.github.com:443')
-      .post('/graphql')
-      .reply(200, { data: { search: reactjsDefault } });
-    nock('https://api.github.com')
-      .post('/graphql')
-      .reply(200, ['wtfh123o1h23l1j23lj']);
-
     const { render } = await getPage({
       route: '/results/reactjs',
     });
