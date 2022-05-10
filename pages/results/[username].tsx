@@ -1,4 +1,4 @@
-import type { NextPage, GetStaticProps } from 'next';
+import type { NextPage, GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { dehydrate, DehydratedState, QueryClient, useQuery } from 'react-query';
@@ -72,7 +72,7 @@ const Results: NextPage<PageProps> = () => {
   );
 };
 
-export const getServerSideProps: GetStaticProps<
+export const getServerSideProps: GetServerSideProps<
   { dehydratedState: DehydratedState },
   { username: string }
 > = async (context) => {
