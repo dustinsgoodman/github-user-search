@@ -11,6 +11,7 @@ export const reactjsDefault: APISearchResponse = {
       login: 'reactjs',
       name: 'React Community',
       url: 'https://github.com/reactjs',
+      __typename: 'Organization',
     },
     {
       avatarUrl:
@@ -29,6 +30,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 0,
       },
       url: 'https://github.com/reactjs-bot',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -47,6 +49,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 884,
       },
       url: 'https://github.com/codingscode',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -65,6 +68,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 81,
       },
       url: 'https://github.com/necolas',
+      __typename: 'User',
     },
     {
       avatarUrl: 'https://avatars.githubusercontent.com/u/1909539?v=4',
@@ -82,6 +86,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 497,
       },
       url: 'https://github.com/chenglou',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -100,6 +105,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 0,
       },
       url: 'https://github.com/reactjsexample',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -118,6 +124,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 45,
       },
       url: 'https://github.com/thiagonmiziara',
+      __typename: 'User',
     },
     {
       avatarUrl: 'https://avatars.githubusercontent.com/u/15846207?v=4',
@@ -127,6 +134,7 @@ export const reactjsDefault: APISearchResponse = {
       login: 'reactjs-alex-alex2006hw',
       name: 'reactjs-alex-alex2006hw',
       url: 'https://github.com/reactjs-alex-alex2006hw',
+      __typename: 'Organization',
     },
     {
       avatarUrl:
@@ -145,6 +153,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 6,
       },
       url: 'https://github.com/Thiago-Nascimento',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -163,6 +172,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 1508,
       },
       url: 'https://github.com/mithi',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -181,6 +191,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 80,
       },
       url: 'https://github.com/marcelo-rafael',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -199,6 +210,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 9,
       },
       url: 'https://github.com/deatiger',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -217,6 +229,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 30,
       },
       url: 'https://github.com/FehmiCitiloglu',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -235,6 +248,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 376,
       },
       url: 'https://github.com/yjose',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -253,6 +267,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 0,
       },
       url: 'https://github.com/reactjs-translation-bot',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -271,6 +286,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 172,
       },
       url: 'https://github.com/damujiangr',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -289,6 +305,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 2929,
       },
       url: 'https://github.com/ErfiDev',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -307,6 +324,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 25,
       },
       url: 'https://github.com/thirunjuguna',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -325,6 +343,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 359,
       },
       url: 'https://github.com/ryyppy',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -343,6 +362,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 52,
       },
       url: 'https://github.com/lucasazeve17',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -361,6 +381,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 74,
       },
       url: 'https://github.com/medhavi11',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -379,6 +400,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 51,
       },
       url: 'https://github.com/ah-nemati',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -397,6 +419,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 24,
       },
       url: 'https://github.com/AmandaCarvalho1989',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -415,6 +438,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 71,
       },
       url: 'https://github.com/TheKetan2',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -433,6 +457,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 4,
       },
       url: 'https://github.com/Dimuthu-10',
+      __typename: 'User',
     },
     {
       avatarUrl: 'https://avatars.githubusercontent.com/u/14802219?v=4',
@@ -442,6 +467,7 @@ export const reactjsDefault: APISearchResponse = {
       login: 'reactjsinaction',
       name: 'reactjsinaction',
       url: 'https://github.com/reactjsinaction',
+      __typename: 'Organization',
     },
     {
       avatarUrl:
@@ -460,6 +486,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 200,
       },
       url: 'https://github.com/Alchemist98',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -478,6 +505,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 15,
       },
       url: 'https://github.com/sebastiantorres86',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -496,6 +524,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 99,
       },
       url: 'https://github.com/OzerOzturk',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -514,6 +543,7 @@ export const reactjsDefault: APISearchResponse = {
         totalCount: 0,
       },
       url: 'https://github.com/Lucbm99',
+      __typename: 'User',
     },
   ],
   pageInfo: {
@@ -535,6 +565,7 @@ export const reactjsLimit10: APISearchResponse = {
       login: 'reactjs',
       name: 'React Community',
       url: 'https://github.com/reactjs',
+      __typename: 'Organization',
     },
     {
       avatarUrl:
@@ -553,6 +584,7 @@ export const reactjsLimit10: APISearchResponse = {
         totalCount: 0,
       },
       url: 'https://github.com/reactjs-bot',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -571,6 +603,7 @@ export const reactjsLimit10: APISearchResponse = {
         totalCount: 884,
       },
       url: 'https://github.com/codingscode',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -589,6 +622,7 @@ export const reactjsLimit10: APISearchResponse = {
         totalCount: 81,
       },
       url: 'https://github.com/necolas',
+      __typename: 'User',
     },
     {
       avatarUrl: 'https://avatars.githubusercontent.com/u/1909539?v=4',
@@ -606,6 +640,7 @@ export const reactjsLimit10: APISearchResponse = {
         totalCount: 497,
       },
       url: 'https://github.com/chenglou',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -624,6 +659,7 @@ export const reactjsLimit10: APISearchResponse = {
         totalCount: 0,
       },
       url: 'https://github.com/reactjsexample',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -642,6 +678,7 @@ export const reactjsLimit10: APISearchResponse = {
         totalCount: 45,
       },
       url: 'https://github.com/thiagonmiziara',
+      __typename: 'User',
     },
     {
       avatarUrl: 'https://avatars.githubusercontent.com/u/15846207?v=4',
@@ -651,6 +688,7 @@ export const reactjsLimit10: APISearchResponse = {
       login: 'reactjs-alex-alex2006hw',
       name: 'reactjs-alex-alex2006hw',
       url: 'https://github.com/reactjs-alex-alex2006hw',
+      __typename: 'Organization',
     },
     {
       avatarUrl:
@@ -669,6 +707,7 @@ export const reactjsLimit10: APISearchResponse = {
         totalCount: 6,
       },
       url: 'https://github.com/Thiago-Nascimento',
+      __typename: 'User',
     },
     {
       avatarUrl:
@@ -687,6 +726,7 @@ export const reactjsLimit10: APISearchResponse = {
         totalCount: 1508,
       },
       url: 'https://github.com/mithi',
+      __typename: 'User',
     },
   ],
   pageInfo: {

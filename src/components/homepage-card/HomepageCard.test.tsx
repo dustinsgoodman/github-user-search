@@ -1,4 +1,4 @@
-import { render, screen } from 'lib/testUtils';
+import { render, screen } from 'test/utils';
 import { HomepageCard } from '.';
 
 describe('HomepageCard', () => {

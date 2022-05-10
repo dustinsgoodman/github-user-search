@@ -18,6 +18,7 @@ export const USER_SEARCH_QUERY = gql`
     ) {
       userCount
       nodes {
+        __typename
         ... on Organization {
           avatarUrl
           description

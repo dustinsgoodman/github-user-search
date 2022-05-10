@@ -27,9 +27,10 @@
       "api/*": ["src/api/*"],
       "components/*": ["src/components/*"],
       "gql/*": ["src/gql/*"],
-      "hooks/*": ["src/hooks/*"],
       "lib/*": ["src/lib/*"],
+      "mocks/*": ["test/mocks/*"],
       "pages/*": ["pages/*"],
+      "styles/*": ["styles/*"],
       "test/*": ["test/*"],
       "types/*": ["src/types/*"]
     }

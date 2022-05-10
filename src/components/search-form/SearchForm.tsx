@@ -14,9 +14,11 @@ const SearchForm = ({ onSubmit }: SearchFormProps) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+      <label htmlFor="username">username</label>
       <input
         {...register('username', { required: true })}
         type="text"
+        id="username"
         placeholder="Search for users or organizations"
         defaultValue={undefined}
         className="w-full rounded border p-2"
