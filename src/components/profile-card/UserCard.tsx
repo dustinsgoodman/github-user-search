@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { User } from 'types/profile';
+import { LinkIcon, LocationIcon, UserGroupIcon } from 'components/icons';
 
 type UserCardProps = {
   profile: User;
@@ -22,13 +23,17 @@ export const UserCard = ({
         {name} ({login})
       </h4>
       <div>
-        followersIcon {followers?.totalCount || 0}
-        followingIcon {following?.totalCount || 0}
+        <UserGroupIcon /> Followers: {followers?.totalCount || 0}
+        Following: {following?.totalCount || 0}
       </div>
-      {location && <div>locationicon {location}</div>}
+      {location && (
+        <div>
+          <LocationIcon /> {location}
+        </div>
+      )}
       {url && (
         <div>
-          orgIcon{' '}
+          <LinkIcon />{' '}
           <a href={url} target="_blank" rel="noreferrer">
             {url}
           </a>

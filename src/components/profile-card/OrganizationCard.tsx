@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Organization } from 'types/profile';
+import { LinkIcon, LocationIcon } from 'components/icons';
 
 type OrganizationCardProps = {
   profile: Organization;
@@ -22,10 +23,14 @@ export const OrganizationCard = ({
         {name} ({login})
       </h4>
       <p>{description}</p>
-      {location && <div>locationicon {location}</div>}
+      {location && (
+        <div>
+          <LocationIcon /> {location}
+        </div>
+      )}
       {url && (
         <div>
-          orgIcon{' '}
+          <LinkIcon />{' '}
           <a href={url} target="_blank" rel="noreferrer">
             {url}
           </a>
