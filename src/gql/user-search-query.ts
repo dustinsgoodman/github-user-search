@@ -40,9 +40,6 @@ export const USER_SEARCH_QUERY = gql`
           location
           login
           name
-          starredRepositories {
-            totalCount
-          }
           url
         }
       }
