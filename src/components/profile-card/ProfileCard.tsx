@@ -31,7 +31,7 @@ export const ProfileCard = ({ profile }: ProfileCardProps) => {
       href={url}
       target="_blank"
       rel="noreferrer"
-      className="group flex rounded border border-gray-300 p-4 hover:border-blue-700 hover:text-blue-700"
+      className="group flex flex-col rounded border border-gray-300 p-4 hover:border-blue-700 hover:text-blue-700 md:flex-row"
     >
       <div className="h-28 w-28 flex-none overflow-hidden rounded-lg">
         <Image
