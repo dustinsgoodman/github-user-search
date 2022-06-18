@@ -6,6 +6,7 @@ const LinkSvgComponent = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     width="1em"
     height="1em"
+    fill="currentColor"
     {...props}
   >
     <path fill="none" d="M0 0h24v24H0z" />
