@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { User } from 'types/profile';
 import { LinkIcon, LocationIcon, UserGroupIcon } from 'components/icons';
 
@@ -7,38 +6,29 @@ type UserCardProps = {
 };
 
 export const UserCard = ({
-  profile: { avatarUrl, name, login, location, url, followers, following },
+  profile: { location, url, followers, following },
 }: UserCardProps) => (
-  <div className="flex">
-    <div className="h-32 w-32 flex-none">
-      <Image
-        src={avatarUrl}
-        alt={`${name || 'user'} profile image`}
-        width={256}
-        height={256}
-      />
+  <>
+    <div className="flex items-center gap-x-2">
+      <UserGroupIcon />
+      <span>
+        <span className="font-semibold">Followers:</span>{' '}
+        {followers?.totalCount || 0}
+      </span>
+      <span>
+        <span className="font-semibold">Following:</span>{' '}
+        {following?.totalCount || 0}
+      </span>
     </div>
-    <div className="flex-1 pl-2">
-      <h4 className="text-lg font-bold">
-        {name} ({login})
-      </h4>
-      <div>
-        <UserGroupIcon /> Followers: {followers?.totalCount || 0}
-        Following: {following?.totalCount || 0}
+    {location && (
+      <div className="flex items-center gap-x-2">
+        <LocationIcon /> {location}
       </div>
-      {location && (
-        <div>
-          <LocationIcon /> {location}
-        </div>
-      )}
-      {url && (
-        <div>
-          <LinkIcon />{' '}
-          <a href={url} target="_blank" rel="noreferrer">
-            {url}
-          </a>
-        </div>
-      )}
-    </div>
-  </div>
+    )}
+    {url && (
+      <div className="flex items-center gap-x-2">
+        <LinkIcon /> {url}
+      </div>
+    )}
+  </>
 );
