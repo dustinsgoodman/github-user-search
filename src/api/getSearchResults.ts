@@ -8,8 +8,9 @@ export const getSearchResults = async ({
     queryParams.set('username', username);
   }
 
+  const baseUrl = `${window.location.protocol}//${window.location.hostname}`;
   const response = await fetch(
-    `${window.location.hostname}api/search?${queryParams.toString()}`,
+    `${baseUrl}/api/search?${queryParams.toString()}`,
   );
 
   if (!response.ok) {
