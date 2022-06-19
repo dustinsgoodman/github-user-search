@@ -1,6 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ProfileCard } from './ProfileCard';
-import { Organization } from 'types/github';
 
 export default {
   title: 'Components/ProfileCard',

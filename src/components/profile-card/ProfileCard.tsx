@@ -13,8 +13,6 @@ function renderCardDetails(profile: SearchResultItem) {
       return <OrganizationCard profile={profile} />;
     case 'User':
       return <UserCard profile={profile} />;
-    default:
-      return null;
   }
 }
 
