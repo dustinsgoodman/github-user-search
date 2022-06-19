@@ -9,7 +9,7 @@ export const getSearchResults = async ({
   }
 
   const response = await fetch(
-    `${window.location}api/search?${queryParams.toString()}`,
+    `${window.location.hostname}api/search?${queryParams.toString()}`,
   );
 
   if (!response.ok) {
