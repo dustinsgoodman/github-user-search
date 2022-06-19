@@ -15,13 +15,16 @@ const customJestConfig = {
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
   modulePaths: ['<rootDir>'],
   testEnvironment: 'jest-environment-jsdom',
-  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/cypress'],
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/cypress',
+    '<rootDir>/pages',
+  ],
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.stories.{js,jsx,ts,tsx}',
     '!src/gql/**/*',
-    'pages/**/*.{js,jsx,ts,tsx}',
   ],
   coverageThreshold: {
     global: {
