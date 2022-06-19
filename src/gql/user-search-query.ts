@@ -22,7 +22,7 @@ export const USER_SEARCH_QUERY = gql`
         ... on Organization {
           avatarUrl
           description
-          orgEmail: email
+          id
           location
           login
           name
@@ -30,19 +30,16 @@ export const USER_SEARCH_QUERY = gql`
         }
         ... on User {
           avatarUrl
-          userEmail: email
           followers {
             totalCount
           }
           following {
             totalCount
           }
+          id
           location
           login
           name
-          starredRepositories {
-            totalCount
-          }
           url
         }
       }

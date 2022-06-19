@@ -5,6 +5,8 @@ import { dehydrate, DehydratedState, QueryClient, useQuery } from 'react-query';
 import { getSearchResults } from 'api/getSearchResults';
 import { getSearchData } from 'pages/api/search';
 import { APISearchResponse } from 'types/search';
+import { ProfileCard } from 'components/profile-card';
+import { SearchResultItem } from 'types/profile';
 
 type PageProps = {};
 
@@ -29,25 +31,8 @@ const Results: NextPage<PageProps> = () => {
     return null;
   }
 
-  // TODO: refactor to own component
-  const renderUser = (user: typeof data.nodes[0]) => {
-    if (!user || Object.keys(user).length === 0) {
-      return null;
-    }
-
-    const validatedUser = user as Extract<
-      typeof data.nodes[0],
-      { __typename: 'Organization' | 'User' }
-    >;
-    return (
-      <li className="list-inside list-disc" key={validatedUser.name}>
-        {validatedUser.name}
-      </li>
-    );
-  };
-
   return (
-    <div className="container">
+    <div className="container mx-auto min-h-screen w-full justify-center">
       <Head>
         <title>Results for {username} | GitHub User Search</title>
         <meta
@@ -57,7 +42,7 @@ const Results: NextPage<PageProps> = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex min-h-screen px-4 py-2">
+      <main className="p-4">
         <div>
           <h1 className="block text-5xl">Results for {username}</h1>
           {error && (
@@ -65,7 +50,14 @@ const Results: NextPage<PageProps> = () => {
               {error.message}
             </div>
           )}
-          <ul className="px-4">{data.nodes.map(renderUser)}</ul>
+          <div className="flex flex-col gap-4">
+            {data.nodes.map((profile, idx) => (
+              <ProfileCard
+                key={`profile-${idx}`}
+                profile={profile as SearchResultItem}
+              />
+            ))}
+          </div>
         </div>
       </main>
     </div>
