@@ -1,6 +1,6 @@
 import { createMocks } from 'node-mocks-http';
 import handler, { getSearchData } from 'pages/api/search';
-import { reactjsDefault, reactjsLimit10 } from 'test/fixtures/search';
+import { reactjsDefault, reactjsLimit10 } from 'mocks/fixtures/search';
 
 describe('.getSearchData', () => {
   it('returns the data from GitHub', async () => {
