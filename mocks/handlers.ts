@@ -1,5 +1,5 @@
 import { rest, graphql } from 'msw';
-import { reactjsDefault, reactjsLimit10 } from 'test/fixtures/search';
+import { reactjsDefault, reactjsLimit10 } from './fixtures/search';
 
 export const handlers = [
   rest.get('/api/search', (req, res, ctx) => {
