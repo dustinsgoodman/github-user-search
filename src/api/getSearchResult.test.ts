@@ -1,5 +1,5 @@
 import { APISearchResponse } from 'types/search';
-import { reactjsLimit10 } from 'test/fixtures/search';
+import { reactjsLimit10 } from 'mocks/fixtures/search';
 import { getSearchResults } from './getSearchResults';
 
 describe('.getSearchResults', () => {

@@ -1,7 +1,7 @@
 import { rest } from 'msw';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import Results from 'pages/results/[username]';
-import { reactjsLimit10 } from 'test/fixtures/search';
+import { reactjsLimit10 } from 'mocks/fixtures/search';
 
 export default {
   title: 'Pages/Results Page',
