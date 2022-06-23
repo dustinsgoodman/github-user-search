@@ -4,6 +4,10 @@ import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import 'styles/globals.css';
 
+if (process.env.NEXT_PUBLIC_API_MOCKING === 'true') {
+  require('../mocks');
+}
+
 function AppRoot({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(
     () =>
